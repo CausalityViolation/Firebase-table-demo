@@ -9,4 +9,5 @@ Includes:
 Coming later (Maybe):
 
     Responsiveness (Phones, Tablets)
+    CRUD actions
     Auth
