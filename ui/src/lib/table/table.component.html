@@ -1,0 +1,104 @@
+<div class="toolbar">
+  <div class="search-container">
+    <svg
+      class="search-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="16"
+      height="16"
+    >
+      <path
+        fill="currentColor"
+        d="M18.9,16.776A10.539,10.539,0,1,0,16.776,18.9l5.1,5.1L24,21.88ZM10.5,18A7.5,7.5,0,1,1,18,10.5,7.507,7.507,0,0,1,10.5,18Z"
+      />
+    </svg>
+    <input type="text" placeholder="Search for games" />
+  </div>
+
+  <div>
+    <button class="filter-button">
+      <svg
+        class="filter-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="16"
+        height="16"
+      >
+        <path d="M3 5h18v2H3V5zm4 6h10v2H7v-2zm4 6h2v2h-2v-2z" />
+      </svg>
+      Filter
+    </button>
+  </div>
+</div>
+
+<div class="game-table">
+  <div class="table-head">
+    <div>Title</div>
+    <div>Developer</div>
+    <div>System</div>
+    <div class="release-date">Release Date</div>
+  </div>
+
+  <div class="table-row" *ngFor="let game of data" [ngClass]="'hover'">
+    <div class="cell name">{{ game.title }}</div>
+    <div class="cell">{{ game.developer }}</div>
+    <div class="cell">{{ game.system }}</div>
+    <div class="cell release-date">
+      {{ game.releaseDate }}
+      <span class="actions">
+        <svg
+          class="hover"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.7634 5.22197L18.5542 7.01304C18.8527 7.31155 18.8527 7.79376 18.5542 8.09227L17.1537 9.49298L14.2838 6.62268L15.6843 5.22197C15.8297 5.07654 16.0211 5 16.22 5C16.419 5 16.6103 5.06889 16.7634 5.22197ZM5 18.7779V15.9076L13.4643 7.44214L16.3342 10.3124L7.86989 18.7779H5Z"
+            fill="#4f4f75"
+          />
+        </svg>
+        <svg
+          class="hover delete-button"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 6H5H21"
+            stroke="#4f4f75"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"
+            stroke="#4f4f75"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M10 11V17"
+            stroke="#4f4f75"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14 11V17"
+            stroke="#4f4f75"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>

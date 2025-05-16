@@ -1,0 +1,124 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  background-color: #f9f9fc;
+  height: 64px;
+  margin-bottom: 16px;
+
+  .search-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 16px;
+  }
+
+  .search-container input {
+    padding: 8px 12px 8px 32px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9fc;
+    font-size: 14px;
+    color: #4f4f75;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    outline: none;
+  }
+
+  .search-container input::placeholder {
+    color: #a0a0c0;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #a0a0c0;
+    pointer-events: none;
+  }
+
+  .filter-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    margin-right: 24px;
+    background-color: #f5f7fa;
+    border: 1px solid #e0e4ea;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #4f4f75;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .filter-button:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .filter-icon {
+    fill: #4f4f75;
+  }
+}
+
+.game-table {
+  width: 60rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr;
+  padding: 1rem 1.5rem;
+  align-items: center;
+}
+
+.table-head {
+  background-color: #f6f7f9;
+  font-weight: 600;
+  color: #888;
+  font-size: 14px;
+}
+
+.release-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-row {
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row.hover:hover {
+  background-color: #f0f4ff;
+  cursor: default;
+}
+
+.cell.name {
+  font-weight: 600;
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  .delete-button {
+    margin-left: 8px;
+  }
+}
+.hover {
+  cursor: pointer;
+}
