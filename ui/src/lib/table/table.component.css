@@ -64,6 +64,7 @@
 
 .game-table {
   width: 60rem;
+  min-height: 21rem;
   background: white;
   border-radius: 8px;
   overflow: hidden;
