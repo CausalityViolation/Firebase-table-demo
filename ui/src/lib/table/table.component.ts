@@ -11,14 +11,11 @@ import { List } from '@org/shared';
 })
 export class TableComponent {
   @Input() data: List[] = [];
-
-  filteredGames: List[] = [];
   searchTerm = '';
 
-  onSearchChange() {
+  filterGames(): List[] {
     const term = this.searchTerm.toLowerCase().trim();
-    this.filteredGames = this.data.filter((game) =>
-      game.title.toLowerCase().includes(term)
-    );
+    if (!term) return this.data;
+    return this.data.filter((game) => game.title.toLowerCase().includes(term));
   }
 }

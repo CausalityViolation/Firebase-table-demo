@@ -14,7 +14,6 @@
     </svg>
     <input
       [(ngModel)]="searchTerm"
-      (input)="onSearchChange()"
       type="text"
       placeholder="Search for games"
     />
@@ -44,7 +43,7 @@
     <div class="release-date">Release Date</div>
   </div>
 
-  <div class="table-row" *ngFor="let game of filteredGames" [ngClass]="'hover'">
+  <div class="table-row" *ngFor="let game of filterGames()" [ngClass]="'hover'">
     <div class="cell name">{{ game.title }}</div>
     <div class="cell">{{ game.developer }}</div>
     <div class="cell">{{ game.system }}</div>
