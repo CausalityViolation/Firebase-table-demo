@@ -43,7 +43,7 @@
     <div class="release-date">Release Date</div>
   </div>
 
-  <div class="table-row" *ngFor="let game of filterGames()" [ngClass]="'hover'">
+  <div class="table-row hover" *ngFor="let game of filterGames()">
     <div class="cell name">{{ game.title }}</div>
     <div class="cell">{{ game.developer }}</div>
     <div class="cell">{{ game.system }}</div>
